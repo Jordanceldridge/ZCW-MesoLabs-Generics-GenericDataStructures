@@ -1,6 +1,6 @@
 package Table;
 
-public class Entry<K, V> {
+public class Entry<K, V>  {
     private K key;
     private V value;
 
@@ -17,4 +17,7 @@ public class Entry<K, V> {
         return value;
     }
 
+    public void setValue(V value) {
+        this.value = value;
+    }
 }
