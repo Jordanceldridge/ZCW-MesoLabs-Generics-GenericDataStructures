@@ -10,7 +10,27 @@ public class Stack<E> {
     private ArrayList elements;
 
 
-    public Stack(){
+    public Stack() {
+        this.elements = new ArrayList<E>();
 
+
+    }
+
+    public void push(E foobar) throws Exception {
+        this.elements.add(foobar);
+    }
+
+    public E pop() throws Exception {
+        this.elements.get(this.elements.size()-1);
+        E tempVariable = (E) this.elements.get(this.elements.size()-1);
+        elements.remove(tempVariable);
+        return tempVariable;
+    }
+
+    public boolean isEmpty() throws Exception {
+        if (this.elements.size() == 0){
+            return true;
+        }
+        return false;
     }
 }
