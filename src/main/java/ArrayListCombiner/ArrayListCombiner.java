@@ -1,5 +1,7 @@
 package ArrayListCombiner;
 
+import Employee.Employee;
+
 import java.util.ArrayList;
 
 /**
@@ -10,4 +12,12 @@ import java.util.ArrayList;
  */
 public class ArrayListCombiner {
 
+    public static <E> void extendCombiner (ArrayList<E> first, ArrayList<? extends E> second) {
+        first.addAll(second);
+    }
+
+    public static <E> void superCombiner(ArrayList<? super E> first, ArrayList<E> second) {
+        first.addAll(second);
+
+    }
 }
